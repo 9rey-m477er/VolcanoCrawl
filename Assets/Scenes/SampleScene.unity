@@ -335,6 +335,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  jumpMultiplier: 1
 --- !u!95 &91720101
 Animator:
   serializedVersion: 5

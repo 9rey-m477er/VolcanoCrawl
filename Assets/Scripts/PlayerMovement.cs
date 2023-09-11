@@ -8,12 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
     private BoxCollider2D coll;
-
+    
     private float dirX=0f;
     [SerializeField]private float MoveSpeed = 7f;
     [SerializeField]private float JumpForce=14f;
     [SerializeField] private LayerMask jumpableGround;
-
+    [SerializeField] private float jumpMultiplier = 1f;
     private enum MovementState {Idle,Running, Jumping, Falling}
     
 
@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * MoveSpeed, rb.velocity.y);
         if (Input.GetButtonDown("Jump")&&IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
+            jumpMultiplier += .1f;
         }
         UpdateAnimationState();
     }
