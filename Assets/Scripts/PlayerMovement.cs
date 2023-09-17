@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float jumpMultiplier = 1f;
     private enum MovementState {Idle,Running, Jumping, Falling}
-    
+
+    private AudioSource audioSource;
+    public AudioClip playerRun;
+    public AudioClip playerJump;
 
     // Start is called before the first frame update
     private void Start()
@@ -25,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         anim=GetComponent<Animator>();
         sprite=GetComponent<SpriteRenderer>();
         coll=GetComponent<BoxCollider2D>();
+
+        audioSource=GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
+            audioSource.PlayOneShot(playerJump, .35f);
         }
         UpdateAnimationState();
     }
@@ -44,12 +50,21 @@ public class PlayerMovement : MonoBehaviour
         MovementState state; 
         if (dirX > 0f)
         {
+            //makes sure audio doesn't loop and only plays when moving while grounded
+            if(!audioSource.isPlaying && IsGrounded())
+            {
+                audioSource.PlayOneShot(playerRun, .25f);
+            }
             state = MovementState.Running;
             sprite.flipX = false;
         }
         else if(dirX < 0f)
         {
-            state=MovementState.Running;
+            if (!audioSource.isPlaying && IsGrounded())
+            {
+                audioSource.PlayOneShot(playerRun, .25f);
+            }
+            state =MovementState.Running;
             sprite.flipX = true;
         }
         else
