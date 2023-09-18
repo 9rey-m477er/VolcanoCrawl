@@ -10,7 +10,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             coins++;
             coinText.text = "Coins: " + coins;
         }
