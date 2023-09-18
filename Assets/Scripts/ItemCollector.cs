@@ -19,7 +19,7 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Coin"))
         {
             audioSource.PlayOneShot(coinCollectSound, 1f);
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             coins++;
             coinText.text = "Coins: " + coins;
         }
