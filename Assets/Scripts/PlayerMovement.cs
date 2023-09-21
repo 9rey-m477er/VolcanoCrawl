@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private float JumpForce=14f;
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float jumpMultiplier = 1f;
+    [SerializeField] private float comboTimer = 3f;
+    [SerializeField] private float comboTime = 1f;
     private enum MovementState {Idle,Running, Jumping, Falling}
 
     private AudioSource audioSource;
@@ -35,13 +37,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        comboTime += ((1+jumpMultiplier) * Time.deltaTime);
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * MoveSpeed, rb.velocity.y);
         if (Input.GetButtonDown("Jump")&&IsGrounded())
         {
+            comboTimer = 3;
+            comboTime = 0f;
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
             audioSource.PlayOneShot(playerJump, .35f);
+        }
+        if(comboTime >= comboTimer)
+        {
+            jumpMultiplier = 1;
         }
         UpdateAnimationState();
     }
