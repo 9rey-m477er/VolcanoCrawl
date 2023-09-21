@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ThinPlatform_Tile_32x6
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: cd8227bf45ee5c04eb1abc732aaa1e87, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.9810307, a: 1}
   m_Transform:
     e00: 1
     e01: 0
