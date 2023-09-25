@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpMultiplier = 1f;
     [SerializeField] private float comboTimer = 3f;
     [SerializeField] private float comboTime = 1f;
+    [SerializeField] private Text comboTimerText;
     private enum MovementState {Idle,Running, Jumping, Falling}
 
     private AudioSource audioSource;
@@ -53,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
             jumpMultiplier = 1;
         }
         UpdateAnimationState();
+        comboTimerText.text = "Combo Time Remaining: " + (int)(comboTimer - comboTime);
     }
     private void UpdateAnimationState()
     {
