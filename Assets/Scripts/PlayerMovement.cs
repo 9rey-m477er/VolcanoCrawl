@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float comboTimer = 3f;
     [SerializeField] private float comboTime = 1f;
     [SerializeField] private Text comboTimerText;
+    public ParticleSystem dust;
     private enum MovementState {Idle,Running, Jumping, Falling}
 
     private AudioSource audioSource;
@@ -49,13 +50,14 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
             audioSource.PlayOneShot(playerJump, .35f);
+            CreateDust();
         }
         if(comboTime >= comboTimer)
         {
             jumpMultiplier = 1;
         }
         UpdateAnimationState();
-        comboTimerText.text = "Combo Time Remaining: " + (int)(comboTimer - comboTime);
+        comboTimerText.text = "Jump Multiplier: " + jumpMultiplier + "x";
     }
     private void UpdateAnimationState()
     {
@@ -69,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
             state = MovementState.Running;
             sprite.flipX = false;
+            CreateDust();
         }
         else if(dirX < 0f)
         {
@@ -78,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             }
             state =MovementState.Running;
             sprite.flipX = true;
+            CreateDust();
         }
         else
         {
@@ -97,5 +101,9 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+    void CreateDust()
+    {
+        dust.Play();
     }
 }
