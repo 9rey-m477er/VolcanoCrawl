@@ -21,7 +21,7 @@ public class ItemCollector : MonoBehaviour
             audioSource.PlayOneShot(coinCollectSound, 1f);
             collision.gameObject.SetActive(false);
             coins++;
-            coinText.text = "Coins: " + coins;
+            coinText.text = "Crystals: " + coins;
         }
     }
 }
