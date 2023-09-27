@@ -1014,7 +1014,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -4615,7 +4615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165, y: -81}
+  m_AnchoredPosition: {x: 185.9, y: -81}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739527609
@@ -4631,7 +4631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9232083, g: 0.85534585, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0.9882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6387,7 +6387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -257, y: -83}
+  m_AnchoredPosition: {x: -257, y: -94}
   m_SizeDelta: {x: 422.3341, y: 98.4972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027648926
@@ -6669,6 +6669,10 @@ PrefabInstance:
     - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_Name
       value: DustPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_LocalPosition.x
