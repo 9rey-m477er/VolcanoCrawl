@@ -340,8 +340,8 @@ MonoBehaviour:
   comboTimer: 3
   comboTime: 1
   comboTimerText: {fileID: 2027648926}
-  playerRun: {fileID: 0}
-  playerJump: {fileID: 0}
+  playerRun: {fileID: 8300000, guid: 536e86f7e2a4f9a4e95ba280e45c6aa4, type: 3}
+  playerJump: {fileID: 8300000, guid: 81607ee30e9a2be4e88eb0f66bc4562f, type: 3}
 --- !u!95 &91720101
 Animator:
   serializedVersion: 5
@@ -6474,7 +6474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1060116481408273459, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.52
+      value: -5.16
       objectReference: {fileID: 0}
     - target: {fileID: 1060116481408273459, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalPosition.z
