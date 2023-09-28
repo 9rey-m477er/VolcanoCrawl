@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour
 
     public AudioClip coinCollectSound;
     AudioSource audioSource;
+    Scoreboard scoreboard;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class ItemCollector : MonoBehaviour
             collision.gameObject.SetActive(false);
             coins++;
             coinText.text = "Crystals: " + coins;
+
+            scoreboard.AddToScore(10);
         }
     }
 }

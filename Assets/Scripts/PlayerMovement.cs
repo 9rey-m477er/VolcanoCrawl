@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
     private BoxCollider2D coll;
+   
     
     private float dirX=0f;
     [SerializeField]private float MoveSpeed = 7f;
