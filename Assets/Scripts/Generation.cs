@@ -18,7 +18,8 @@ public class Generation : MonoBehaviour
 
     public float objectsMinRotation = -45.0f;
     public float objectsMaxRotation = 45.0f;
-
+    public float lastRoomEndY;
+    public float lastObjectY;
  
     // Start is called before the first frame update
     void Start()
@@ -44,9 +45,10 @@ public class Generation : MonoBehaviour
     {
         int randomRoomIndex = Random.Range(0, availableRooms.Length);
         GameObject room = Instantiate(availableRooms[randomRoomIndex]);
-        float roomCenter = farthestRoomEndY + TerrainHeight * .5f;
+        float roomCenter = farthestRoomEndY + TerrainHeight * .5f+15f;
         room.transform.position = new Vector3(0, roomCenter, 0);
         currentRooms.Add(room);
+        
     }
 
     void GenerateObjectsIfRequired()
