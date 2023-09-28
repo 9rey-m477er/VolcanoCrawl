@@ -338,6 +338,8 @@ MonoBehaviour:
   jumpMultiplier: 1
   comboTimer: 3
   comboTime: 1
+  comboTimerText: {fileID: 0}
+  dust: {fileID: 0}
   playerRun: {fileID: 0}
   playerJump: {fileID: 0}
 --- !u!95 &91720101
@@ -393,7 +395,7 @@ GameObject:
   - component: {fileID: 299861950}
   m_Layer: 0
   m_Name: Lava_Anim_64x32_0
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -942,8 +944,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0022500157, y: -0.1505, z: 0}
-    m_Extent: {x: 1.2235501, y: 1.2360001, z: 0}
+    m_Center: {x: 0.006000042, y: -0.15695, z: 0}
+    m_Extent: {x: 1.2306, y: 1.23915, z: 0}
   m_PointLightInnerAngle: 182.3816
   m_PointLightOuterAngle: 211.51161
   m_PointLightInnerRadius: 2.5

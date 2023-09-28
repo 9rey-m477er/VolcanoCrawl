@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RisingLava : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class RisingLava : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Dead");
+            Die();
         }
     }
     // Update is called once per frame
@@ -23,5 +25,9 @@ public class RisingLava : MonoBehaviour
     {
         rb.position += new Vector2(rb.velocity.x, (riseSpeed * Time.deltaTime));
         
+    }
+   void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
