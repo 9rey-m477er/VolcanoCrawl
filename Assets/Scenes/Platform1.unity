@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 91720102}
   - component: {fileID: 91720103}
   - component: {fileID: 91720104}
+  - component: {fileID: 91720105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -489,6 +490,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 929877790}
+--- !u!114 &91720105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91720095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b42e9fc69b335c49bb3dbd504c664ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableRooms:
+  - {fileID: 6559610187960252138, guid: fd49372c2ff9c3a468bc958df862ee1d, type: 3}
+  - {fileID: 169906725351199423, guid: e6bf2280ad72064409777793f1cb05a6, type: 3}
+  - {fileID: 8977948501561954778, guid: 56b7ea52c027b8f46b801e89aae48ad2, type: 3}
+  - {fileID: 5381437009032480056, guid: a7ee08671c161fe418cc26f804ecfed8, type: 3}
+  - {fileID: 5461445901370724670, guid: c543e8edc9e9e9e44b306cb0ff757241, type: 3}
+  - {fileID: 5965624972758652483, guid: b6f5f5b51bf9552468b5db6add430f6e, type: 3}
+  currentRooms: []
+  availableObjects: []
+  objects: []
+  TerrainHeight: 16
+  objectsMinDistance: 5
+  objectsMaxDistance: 10
+  objectsMinX: -1.4
+  objectsMaxX: 1.4
+  objectsMinRotation: -45
+  objectsMaxRotation: 45
 --- !u!1001 &155034517
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class Scoreboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         UpdateScore(transform.position.y);
     }
 }
