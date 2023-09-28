@@ -23,7 +23,7 @@ public class ItemCollector : MonoBehaviour
             coins++;
             coinText.text = "Crystals: " + coins;
 
-            scoreboard.AddToScore(10);
+            //scoreboard.AddToScore(10);
             collision.gameObject.SetActive(false);
         }
     }

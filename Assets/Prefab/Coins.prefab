@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565444140053789759}
   - component: {fileID: 3126999165644401254}
-  - component: {fileID: 3483283026107057093}
+  - component: {fileID: 8058918748675020841}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Coin
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3483283026107057093
+--- !u!61 &8058918748675020841
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +200,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0021927357, y: 0.00000017881393}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -211,5 +211,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8858485, y: 1.0366017}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
