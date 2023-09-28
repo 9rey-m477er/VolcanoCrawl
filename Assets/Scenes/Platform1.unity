@@ -157,73 +157,6 @@ Transform:
   - {fileID: 489353046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &82793818
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 91720099}
-    m_Modifications:
-    - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_Name
-      value: DustPS
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.114
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.416
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
---- !u!4 &82793819 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-  m_PrefabInstance: {fileID: 82793818}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &82793820 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2967964449100781643, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
-  m_PrefabInstance: {fileID: 82793818}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &91720095
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,11 +317,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
   - {fileID: 1615568652}
-=======
-  - {fileID: 82793819}
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &91720100
@@ -412,15 +341,9 @@ MonoBehaviour:
   comboTimer: 3
   comboTime: 1
   comboTimerText: {fileID: 2027648926}
-<<<<<<< HEAD
   dust: {fileID: 1615568650}
   playerRun: {fileID: 0}
   playerJump: {fileID: 0}
-=======
-  dust: {fileID: 82793820}
-  playerRun: {fileID: 8300000, guid: 536e86f7e2a4f9a4e95ba280e45c6aa4, type: 3}
-  playerJump: {fileID: 8300000, guid: 81607ee30e9a2be4e88eb0f66bc4562f, type: 3}
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
 --- !u!95 &91720101
 Animator:
   serializedVersion: 5
@@ -1068,12 +991,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.532
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4692,11 +4615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: 185.9, y: -81}
-=======
-  m_AnchoredPosition: {x: 99, y: -15.400024}
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739527609
@@ -4712,11 +4631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 1, g: 0.9137255, b: 0.9882353, a: 1}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4725,19 +4640,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
     m_FontSize: 43
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 43
-=======
-    m_FontSize: 20
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6480,13 +6387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: -257, y: -94}
   m_SizeDelta: {x: 422.3341, y: 98.4972}
-=======
-  m_AnchoredPosition: {x: -102.90338, y: -21}
-  m_SizeDelta: {x: 199.7, y: 30}
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027648926
 MonoBehaviour:
@@ -6510,14 +6412,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
     m_FontSize: 43
-=======
-    m_FontSize: 20
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 10
     m_MaxSize: 179
     m_Alignment: 3
     m_AlignByGeometry: 1
@@ -6525,11 +6423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-<<<<<<< HEAD
   m_Text: 'Jump Multipler:'
-=======
-  m_Text: 'Jump Multiplier:'
->>>>>>> 345e783018b04847003d667b70037b16942d5d7b
 --- !u!222 &2027648927
 CanvasRenderer:
   m_ObjectHideFlags: 0
