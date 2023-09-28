@@ -20,11 +20,11 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Coin"))
         {
             audioSource.PlayOneShot(coinCollectSound, 1f);
-            collision.gameObject.SetActive(false);
             coins++;
             coinText.text = "Crystals: " + coins;
 
             scoreboard.AddToScore(10);
+            collision.gameObject.SetActive(false);
         }
     }
 }
