@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4702,14 +4702,14 @@ RectTransform:
   m_GameObject: {fileID: 1739527607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6717, y: 1.6717, z: 1.6717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 948371782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 185.9, y: -81}
+  m_AnchoredPosition: {x: 126, y: -39}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739527609
@@ -4725,7 +4725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9137255, b: 0.9882353, a: 1}
+  m_Color: {r: 0.8694276, g: 0.77251685, b: 0.990566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4734,9 +4734,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 43
     m_Alignment: 0
@@ -6481,8 +6481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -257, y: -94}
-  m_SizeDelta: {x: 422.3341, y: 98.4972}
+  m_AnchoredPosition: {x: -119, y: -42}
+  m_SizeDelta: {x: 191.8731, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027648926
 MonoBehaviour:
@@ -6497,7 +6497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.91194963, b: 0.98827, a: 1}
+  m_Color: {r: 0.87058824, g: 0.77254903, b: 0.99215686, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6506,10 +6506,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 43
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 179
     m_Alignment: 3
     m_AlignByGeometry: 1
@@ -6654,6 +6654,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Lava
       objectReference: {fileID: 0}
+    - target: {fileID: 4968384687054479759, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1738521909}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_FalloffIntensity
       value: 0.966
