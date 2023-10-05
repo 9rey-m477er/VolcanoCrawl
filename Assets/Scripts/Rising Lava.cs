@@ -36,7 +36,7 @@ public class RisingLava : MonoBehaviour
 
         while (riseSpeed < 1.0f)
         {
-            riseSpeed += 0.1f; // Increase riseSpeed by 0.1
+            riseSpeed += 0.05f; // Increase riseSpeed by 0.1
             yield return new WaitForSeconds(1); // Wait for 1 second before the next increase
         }
     }

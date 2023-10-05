@@ -5,26 +5,30 @@ using UnityEngine.UI;
 
 public class Scoreboard : MonoBehaviour
 {
-    private float score = 0; 
+    private float scoreC = 0;
+    private float scoreY = 0;
+    private float score = 0;
 
     [SerializeField] private Text scoreText; 
 
 
     public void UpdateScore(float newY)
     {
-        score = newY; 
+         scoreY = newY;
         UpdateScoreText(); 
     }
 
     public void AddToScore(int amount)
     {
-        score += amount; 
-        UpdateScoreText(); 
+        scoreC += amount; 
+        UpdateScoreText();
+        Debug.Log("Score updated. New score: " + scoreC);
     }
 
     // Method to update the score text on the UI
     private void UpdateScoreText()
     {
+        score = scoreC + scoreY;
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString("F0"); 

@@ -6,14 +6,16 @@ public class ItemCollector : MonoBehaviour
 {
     private int coins = 0;
     [SerializeField] private Text coinText;
+     Scoreboard scoreboard;
 
     public AudioClip coinCollectSound;
     AudioSource audioSource;
-    Scoreboard scoreboard;
+    
 
     private void Start()
     {
         audioSource= GetComponent<AudioSource>();
+        scoreboard= GetComponent<Scoreboard>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,7 +25,7 @@ public class ItemCollector : MonoBehaviour
             coins++;
             coinText.text = "Crystals: " + coins;
 
-            //scoreboard.AddToScore(10);
+            scoreboard.AddToScore(10);
             collision.gameObject.SetActive(false);
         }
     }
