@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class RisingLava : MonoBehaviour
 {
     private float riseSpeed = .1f;
-    private float resetDistance = 20f; // Distance above the player to reset to
+    public float resetDistance = 15f; // Distance above the player to reset to
     public Rigidbody2D rb;
     [SerializeField] Transform player;
     private Vector2 initialPosition; // Store the initial position of the lava
