@@ -41,13 +41,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (IsGrounded())
+        {
+
         comboTime += ((1+jumpMultiplier) * Time.deltaTime);
+        }
+        
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * MoveSpeed, rb.velocity.y);
         if (Input.GetButtonDown("Jump")&&IsGrounded())
         {
             comboTimer = 3;
-            comboTime = 0f;
+            
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
             audioSource.PlayOneShot(playerJump, .35f);
@@ -55,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(comboTime >= comboTimer)
         {
+            comboTime = 0f;
             jumpMultiplier = 1;
         }
         UpdateAnimationState();
