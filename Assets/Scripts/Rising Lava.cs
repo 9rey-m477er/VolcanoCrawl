@@ -43,7 +43,8 @@ public class RisingLava : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene("LeaderBoard");
     }
 
     IEnumerator IncreaseRiseSpeed()

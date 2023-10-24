@@ -32,7 +32,9 @@ public class Scoreboard : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString("F0"); 
+            PlayerPrefs.SetFloat("HighScore", score);
         }
+        
     }
 
     // Update is called once per frame

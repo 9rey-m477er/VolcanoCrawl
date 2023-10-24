@@ -13,5 +13,8 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("Platform 2");
     }
-
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Title Screen");
+    }
 }
