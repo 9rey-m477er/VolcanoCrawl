@@ -9,9 +9,13 @@ public class Scoreboard : MonoBehaviour
     private float scoreY = 0;
     private float score = 0;
 
-    [SerializeField] private Text scoreText; 
+    [SerializeField] private Text scoreText;
 
-
+    void Start()
+    {
+        float loadedHighScore = PlayerPrefs.GetFloat("HighScore", 0f);
+                                                                       
+    }
     public void UpdateScore(float newY)
     {
          scoreY = newY;

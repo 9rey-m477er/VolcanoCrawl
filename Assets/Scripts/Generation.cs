@@ -45,7 +45,7 @@ public class Generation : MonoBehaviour
     {
         int randomRoomIndex = Random.Range(0, availableRooms.Length);
         GameObject room = Instantiate(availableRooms[randomRoomIndex]);
-        float roomCenter = farthestRoomEndY + TerrainHeight * .5f+13f;
+        float roomCenter = farthestRoomEndY + TerrainHeight * .5f+16f;
         room.transform.position = new Vector3(0, roomCenter, 0);
         currentRooms.Add(room);
         
