@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float comboTime = 1f;
     [SerializeField] private Text comboTimerText;
     public ParticleSystem dust;
+    public ParticleSystem jumpParticle;
+    public ParticleSystem timerEnd;
     private enum MovementState {Idle,Running, Jumping, Falling}
 
     private AudioSource audioSource;
@@ -56,14 +58,20 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
             audioSource.PlayOneShot(playerJump, .35f);
+            CreateJumpParticle();
             CreateDust();
         }
         if(comboTime >= comboTimer)
         {
+            timerEnd.Play();
             comboTime = 0f;
             jumpMultiplier = 1;
         }
+
         UpdateAnimationState();
+        UpdateParticleColor(dust);
+        UpdateParticleColor(jumpParticle);
+
         comboTimerText.text = "Jump Multiplier: " + jumpMultiplier + "x";
     }
     private void UpdateAnimationState()
@@ -97,10 +105,20 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y > .1f)
         {
             state=MovementState.Jumping;
+
+            if(jumpParticle.isPlaying == false)
+            {
+                UpdateParticleColor(jumpParticle);
+                CreateJumpParticle();
+            }  
         }
         else if(rb.velocity.y < -.1f)
         {
             state = MovementState.Falling;
+            if(jumpParticle.isPlaying == true)
+            {
+                jumpParticle.Stop();
+            }
         }
         anim.SetInteger("state", (int)state);
     }
@@ -112,5 +130,25 @@ public class PlayerMovement : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+    void CreateJumpParticle()
+    {
+        jumpParticle.Play();
+    }
+    void UpdateParticleColor(ParticleSystem part)
+    {
+        var mainPS = part.main;
+        if(comboTime <= 1f)
+        {
+            mainPS.startColor = Color.yellow;
+        }
+        else if(comboTime <= 2f)
+        {
+            mainPS.startColor = Color.white;
+        }
+        else if (comboTime <= 3f)
+        {
+            mainPS.startColor = Color.gray;
+        }
     }
 }
