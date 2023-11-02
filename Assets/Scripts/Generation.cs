@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Generation : MonoBehaviour
 {
-    public GameObject[] availableRooms;
+    public GameObject[] easyRooms;
+    public GameObject[] mediumRooms;
     public List<GameObject> currentRooms;
     private float screenHeightInPoints;
     public GameObject[] availableObjects;
@@ -20,6 +23,9 @@ public class Generation : MonoBehaviour
     public float objectsMaxRotation = 45.0f;
     public float lastRoomEndY;
     public float lastObjectY;
+
+    public Text scoreText;
+    float playerScore = 0;
  
     // Start is called before the first frame update
     void Start()
@@ -43,8 +49,35 @@ public class Generation : MonoBehaviour
 
     void AddRoom(float farthestRoomEndY)
     {
-        int randomRoomIndex = Random.Range(0, availableRooms.Length);
-        GameObject room = Instantiate(availableRooms[randomRoomIndex]);
+        GameObject room;
+        playerScore = int.Parse(scoreText.text.Substring(6));
+
+        Debug.Log(playerScore);
+        if(playerScore < 250)
+        {
+            int randomRoomIndex = Random.Range(0, easyRooms.Length);
+            room = Instantiate(easyRooms[randomRoomIndex]);
+        }
+        else if(playerScore > 250 && playerScore < 500) 
+        {
+            if(Random.Range(0,2) == 0)
+            {
+                int randomRoomIndex = Random.Range(0, easyRooms.Length);
+                room = Instantiate(easyRooms[randomRoomIndex]);
+            }
+            else
+            {
+                int randomRoomIndex = Random.Range(0, mediumRooms.Length);
+                room = Instantiate(mediumRooms[randomRoomIndex]);
+            }
+        }
+        else
+        {
+            int randomRoomIndex = Random.Range(0, mediumRooms.Length);
+            room = Instantiate(mediumRooms[randomRoomIndex]);
+        }
+        //int randomRoomIndex = Random.Range(0, easyRooms.Length);
+        //GameObject room = Instantiate(easyRooms[randomRoomIndex]);
         float roomCenter = farthestRoomEndY + TerrainHeight * .5f+16f;
         room.transform.position = new Vector3(0, roomCenter, 0);
         currentRooms.Add(room);

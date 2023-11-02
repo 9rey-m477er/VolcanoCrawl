@@ -11,6 +11,11 @@ public class Scoreboard : MonoBehaviour
 
     [SerializeField] private Text scoreText;
 
+    public float Score
+    {
+        get => score;
+    }
+
     void Start()
     {
         float loadedHighScore = PlayerPrefs.GetFloat("HighScore", 0f);
