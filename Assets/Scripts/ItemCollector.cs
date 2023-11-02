@@ -21,12 +21,16 @@ public class ItemCollector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
+            ParticleSystem ps = collision.gameObject.GetComponentInChildren<ParticleSystem>();
+            ps.Play();
+            collision.gameObject.GetComponent<Renderer>().enabled = false;
             audioSource.PlayOneShot(coinCollectSound, 1f);
             coins++;
             coinText.text = "Crystals: " + coins;
 
             scoreboard.AddToScore(10);
-            collision.gameObject.SetActive(false);
+            //collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject, 0.25f);
         }
     }
 }
