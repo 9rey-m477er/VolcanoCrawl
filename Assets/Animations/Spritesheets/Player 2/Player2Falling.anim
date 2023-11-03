@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player2Jump
+  m_Name: Player2Falling
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -2140279938, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - time: 0.16666667
-      value: {fileID: 1113589227, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - time: 0.33333334
-      value: {fileID: 1289031870, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - time: 0.5
-      value: {fileID: 2041375983, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
+      value: {fileID: -791515845, guid: 81c957718a92e5b4987122e68e0518ea, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,16 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -2140279938, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - {fileID: 1113589227, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - {fileID: 1289031870, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
-    - {fileID: 2041375983, guid: c375e463f621cd74c9a720bb098e96e8, type: 3}
+    - {fileID: -791515845, guid: 81c957718a92e5b4987122e68e0518ea, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

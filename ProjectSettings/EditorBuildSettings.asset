@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeaderBoard.unity
     guid: eae58e36627b9364dbf1f439cc368a25
+  - enabled: 1
+    path: Assets/Scenes/Two Player Mode.unity
+    guid: eef51198a0c3fc0418785aa2268f3d8c
   m_configObjects: {}
