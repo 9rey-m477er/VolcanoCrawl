@@ -28,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip playerRun;
     public AudioClip playerJump;
 
+    private float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
+    private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -45,23 +50,44 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsGrounded())
         {
-
-        comboTime += ((1+jumpMultiplier) * Time.deltaTime);
+            comboTime += ((1+jumpMultiplier) * Time.deltaTime);
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
         }
         
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * MoveSpeed, rb.velocity.y);
-        if (Input.GetButtonDown("Jump")&&IsGrounded())
+        //changed IsGrounded check to CoyoteTime check to add coyote time - Reece
+        //added Jump Buffering by changing Input.GetButtonDown("Jump") to jumpBufferCounter > 0f
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
         {
             comboTimer = 3;
-            
+            jumpBufferCounter = 0; // buffer counter change
             rb.velocity = new Vector2(rb.velocity.x, (JumpForce * jumpMultiplier));
             jumpMultiplier += .1f;
             audioSource.PlayOneShot(playerJump, .35f);
             CreateJumpParticle();
             CreateDust();
         }
-        if(comboTime >= comboTimer)
+        //added this as well for coyote timer implementation - Reece
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            coyoteTimeCounter = 0f;
+        }
+        //added this for jump buffer implementation - Reece
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (comboTime >= comboTimer)
         {
             timerEnd.Play();
             comboTime = 0f;
