@@ -241,7 +241,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: lengthInSec
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: TrailModule.ratio
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
@@ -249,16 +257,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: NoiseModule.strength.scalar
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: TrailModule.minVertexDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.75
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: NoiseModule.scrollSpeed.scalar
       value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: TrailModule.sizeAffectsLifetime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: TrailModule.widthOverTrail.scalar
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -284,6 +308,14 @@ PrefabInstance:
       propertyPath: m_LengthScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6300595705743546160, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300595705743546160, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6137352648dc7d749840061f11cdc037, type: 2}
     - target: {fileID: 9157736054548558875, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

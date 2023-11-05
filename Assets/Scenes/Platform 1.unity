@@ -323,6 +323,7 @@ Transform:
   - {fileID: 1615568652}
   - {fileID: 1244044255}
   - {fileID: 7570841252146394882}
+  - {fileID: 1083158497}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &91720100
@@ -1300,6 +1301,96 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1083158496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083158497}
+  - component: {fileID: 1083158499}
+  - component: {fileID: 1083158498}
+  m_Layer: 0
+  m_Name: FeetCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1083158497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083158496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 91720099}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1083158498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083158496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9e0229679c82b4091271410fe67c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1083158499
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083158496}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09433937, y: -0.3806675}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45954704, y: 0.08290148}
+  m_EdgeRadius: 0
 --- !u!1001 &1231906532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7665,6 +7756,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1996389209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.47374249
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.4474087
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909683077870784765, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_Name
+      value: Rockie_Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 982da3858d7f94647914b3847704a39b, type: 3}
 --- !u!1 &2003951163
 GameObject:
   m_ObjectHideFlags: 0
@@ -7977,6 +8125,10 @@ PrefabInstance:
     - target: {fileID: 3188629121853567857, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_Name
       value: Lava_Anim_64x32_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188629121853567857, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3188629121853567857, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_TagString
@@ -8292,3 +8444,4 @@ SceneRoots:
   - {fileID: 1424086892}
   - {fileID: 2063991314}
   - {fileID: 155034517}
+  - {fileID: 1996389209}
