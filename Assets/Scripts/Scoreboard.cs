@@ -41,7 +41,7 @@ public class Scoreboard : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString("F0"); 
-            PlayerPrefs.SetFloat("HighScore", score);
+            PlayerPrefs.SetInt("HighScore", (int)score);
         }
         
     }

@@ -11,9 +11,8 @@ public class Score : MonoBehaviour
     [SerializeField]
     ScoreText[] st = new ScoreText[5];
     [SerializeField]
-    TMP_InputField input;
-
-    float[] scoreboard = new float[5];
+    TMP_InputField input; 
+    int[] scoreboard = new int[5];
     string[] names = new string[5];
     
     // Start is called before the first frame update
@@ -28,27 +27,7 @@ public class Score : MonoBehaviour
     }
     private void Awake()
     {
-        InitialScores();
-        int count = 0;
-        try
-        {
-            StreamReader sr = new StreamReader(Application.dataPath + "HighScores.txt");
-            string dataline = sr.ReadLine();
-            while(dataline != null && count < 5)
-            {
-                string[] oldscores = dataline.Split(",");
-                names[count] = oldscores[0];
-                scoreboard[count] = Int32.Parse(oldscores[1]);
-                dataline = sr.ReadLine();
-                count++;
-            }
-            sr.Close();
-        }
-        catch (Exception e)
-        {
-            Debug.Log("File not found");
-            
-        }
+        LoadScores();
     }
     void DisplayScores()
     {
@@ -74,11 +53,11 @@ public class Score : MonoBehaviour
     public void SaveScores()
     {
         string newName = input.text;
-        float newScore = PlayerPrefs.GetFloat("HighScore");
+        int newScore = PlayerPrefs.GetInt("HighScore");
 
 
         int minIndex = -1;
-        float minScore = newScore;
+        int minScore = newScore;
         for(int i = 0; i < 5; i++)
         {
             if(scoreboard[i] < minScore)
@@ -107,7 +86,7 @@ public class Score : MonoBehaviour
 
             // Swap the found minimum element with the first
             // element
-            float temp = scoreboard[min_idx];
+            int temp = scoreboard[min_idx];
             string temp2 = names[min_idx];
             scoreboard[min_idx] = scoreboard[i];
             names[min_idx] = names[i];
@@ -133,7 +112,26 @@ public class Score : MonoBehaviour
     }
     public void LoadScores()
     {
-
+        int count = 0;
+        try
+        {
+            StreamReader sr = new StreamReader(Application.dataPath + "HighScores.txt");
+            string dataline = sr.ReadLine();
+            while (dataline != null && count < 5)
+            {
+                string[] oldscores = dataline.Split(",");
+                names[count] = oldscores[0];
+                scoreboard[count] = Int32.Parse(oldscores[1]);
+                dataline = sr.ReadLine();
+                count++;
+            }
+            sr.Close();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("File not found");
+            InitialScores();
+        }
     }
     // Update is called once per frame
     void Update()
