@@ -8,6 +8,7 @@ public class Generation : MonoBehaviour
 {
     public GameObject[] easyRooms;
     public GameObject[] mediumRooms;
+    public GameObject[] hardRooms;
     public List<GameObject> currentRooms;
     private float screenHeightInPoints;
     public GameObject[] availableObjects;
@@ -58,7 +59,7 @@ public class Generation : MonoBehaviour
             int randomRoomIndex = Random.Range(0, easyRooms.Length);
             room = Instantiate(easyRooms[randomRoomIndex]);
         }
-        else if(playerScore > 250 && playerScore < 500) 
+        else if(playerScore >= 250 && playerScore < 500) 
         {
             if(Random.Range(0,2) == 0)
             {
@@ -71,10 +72,28 @@ public class Generation : MonoBehaviour
                 room = Instantiate(mediumRooms[randomRoomIndex]);
             }
         }
-        else
+        else if(playerScore >= 500 && playerScore < 750)
         {
             int randomRoomIndex = Random.Range(0, mediumRooms.Length);
             room = Instantiate(mediumRooms[randomRoomIndex]);
+        }
+        else if(playerScore >= 750 && playerScore < 1000)
+        {
+            if (Random.Range(0, 2) == 0)
+            {
+                int randomRoomIndex = Random.Range(0, mediumRooms.Length);
+                room = Instantiate(mediumRooms[randomRoomIndex]);
+            }
+            else
+            {
+                int randomRoomIndex = Random.Range(0, hardRooms.Length);
+                room = Instantiate(hardRooms[randomRoomIndex]);
+            }
+        }
+        else
+        {
+            int randomRoomIndex = Random.Range(0, hardRooms.Length);
+            room = Instantiate(hardRooms[randomRoomIndex]);
         }
         //int randomRoomIndex = Random.Range(0, easyRooms.Length);
         //GameObject room = Instantiate(easyRooms[randomRoomIndex]);
