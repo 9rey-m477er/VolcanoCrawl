@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,17 +34,32 @@ public class PlayerMovement : MonoBehaviour
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
-    // Start is called before the first frame update
-    private void Start()
+    private void OnEnable()
     {
-     
-        rb=GetComponent<Rigidbody2D>();
-        anim=GetComponent<Animator>();
-        sprite=GetComponent<SpriteRenderer>();
-        coll=GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        coll = GetComponent<BoxCollider2D>();
 
-        audioSource=GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+
+        Scene current = SceneManager.GetActiveScene();
+        if(current.name.Equals("Two Player Mode"))
+        {
+
+        }
     }
+    // Start is called before the first frame update
+    //private void Start()
+    //{
+
+    //    rb=GetComponent<Rigidbody2D>();
+    //    anim=GetComponent<Animator>();
+    //    sprite=GetComponent<SpriteRenderer>();
+    //    coll=GetComponent<BoxCollider2D>();
+
+    //    audioSource=GetComponent<AudioSource>();
+    //}
 
     // Update is called once per frame
     private void Update()

@@ -11,7 +11,7 @@ public class Scenes : MonoBehaviour
     }
    public void TwoPlayer()
     {
-        SceneManager.LoadScene("Platform 2");
+        SceneManager.LoadScene("Two Player Mode");
     }
     public void MainMenu()
     {

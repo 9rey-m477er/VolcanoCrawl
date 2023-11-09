@@ -23,7 +23,7 @@ public class Spike : MonoBehaviour
         if (isStunned)
         {
             stunTimer += Time.deltaTime;
-
+            DisableHorizontalMovement();
             if (stunTimer >= stunDuration)
             {
                 isStunned = false;
@@ -48,7 +48,6 @@ public class Spike : MonoBehaviour
     {
         isStunned = true;
         // Restrict the player's horizontal movement while still allowing them to fall.
-        DisableHorizontalMovement();
     }
 
     void DisableHorizontalMovement()
