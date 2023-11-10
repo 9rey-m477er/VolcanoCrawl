@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 1739527609}
   coinCollectSound: {fileID: 8300000, guid: 09f40714b45fd7249aca32f07e20fe13, type: 3}
+  floatingPoints: {fileID: 4372924295663382294, guid: 8d01eb54e97eac74f8da89e75e9f62e8, type: 3}
 --- !u!82 &91720103
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1384,7 +1385,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09433937, y: -0.3806675}
+  m_Offset: {x: -0.09433937, y: -0.390063}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1395,7 +1396,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45954704, y: 0.08290148}
+  m_Size: {x: 0.45954704, y: 0.10169244}
   m_EdgeRadius: 0
 --- !u!1001 &1231906532
 PrefabInstance:
@@ -7908,6 +7909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rockie_Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8926615538525588939, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8117,6 +8122,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 91720099}
     m_Modifications:
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154501981558548575, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3389404439885026918, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: m_Name
       value: Explosion
@@ -8222,6 +8287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1565578984510036570, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3188629121853567857, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_Name
       value: Lava_Anim_64x32_0
@@ -8242,13 +8311,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 91720099}
+    - target: {fileID: 6661046356539280322, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_FalloffIntensity
       value: 0.966
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LightVolumeIntensity
-      value: 0.22
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_ShapeLightFalloffSize
@@ -8256,19 +8329,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.00040000677
+      value: 0.004450023
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: -0.18495
+      value: -0.48839998
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 1.8875
+      value: 1.8894501
       objectReference: {fileID: 0}
     - target: {fileID: 8198708885705152033, guid: ea98e3d8b96c60f4bb5d6b540b2bcc19, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 2.17455
+      value: 2.4887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8365,6 +8438,10 @@ PrefabInstance:
     - target: {fileID: 8945847867254535104, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
       propertyPath: VelocityModule.y.scalar
       value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945847867254535104, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8945847867254535104, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime0
@@ -8484,6 +8561,10 @@ PrefabInstance:
     - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967964449100781643, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_LocalPosition.x
