@@ -36,6 +36,10 @@ public class Generation : MonoBehaviour
     float playerScore2 = 0;
     float higherscore = 0;
     private Scene scene;
+
+    public GameObject player1;
+    public GameObject player2;
+    private GameObject higherPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -132,9 +136,26 @@ public class Generation : MonoBehaviour
     
     void GenerateObjectsIfRequired()
     {
-        float playerY = transform.position.y;
-        float removeObjectsY = playerY - screenHeightInPoints;
-        float addObjectY = playerY + screenHeightInPoints;
+        higherPlayer = player1;
+        float higherY = 0;
+        if(scene.name == "Two Player Mode")
+        {
+            if(player1.transform.position.y >= player2.transform.position.y)
+            {
+                higherPlayer = player1;
+            }
+            else
+            {
+                higherPlayer = player2;
+            }
+        }
+        else
+        {
+
+        
+        higherY = higherPlayer.transform.position.y;
+        float removeObjectsY = higherY - screenHeightInPoints;
+        float addObjectY = higherY + screenHeightInPoints;
         float farthestObjectY = 0;
 
         List<GameObject> objectsToRemove = new List<GameObject>();
@@ -158,15 +179,29 @@ public class Generation : MonoBehaviour
         {
             AddObject(farthestObjectY);
         }
+        }
     }
 
     private void GenerateRoomIfRequired()
     {
+        higherPlayer = player1;
+        if (scene.name == "Two Player Mode")
+        {
+            if (player1.transform.position.y >= player2.transform.position.y)
+            {
+                higherPlayer = player1;
+            }
+            else
+            {
+                higherPlayer = player2;
+            }
+        }
+
         List<GameObject> roomsToRemove = new List<GameObject>();
         bool addRooms = true;
-        float playerY = transform.position.y;
-        float removeRoomY = playerY - screenHeightInPoints;
-        float addRoomY = playerY + screenHeightInPoints;
+        float higherY = higherPlayer.transform.position.y;
+        float removeRoomY = higherY - screenHeightInPoints;
+        float addRoomY = higherY + screenHeightInPoints;
         float farthestRoomEndY = 0;
 
         foreach (var room in currentRooms)

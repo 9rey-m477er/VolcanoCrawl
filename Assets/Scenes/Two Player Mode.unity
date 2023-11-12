@@ -600,6 +600,8 @@ MonoBehaviour:
   lastObjectY: 0
   scoreText: {fileID: 929877790}
   scoreText2: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!81 &91720106
 AudioListener:
   m_ObjectHideFlags: 0
@@ -841,6 +843,8 @@ MonoBehaviour:
   lastObjectY: 0
   scoreText: {fileID: 929877790}
   scoreText2: {fileID: 1516013011}
+  player1: {fileID: 91720095}
+  player2: {fileID: 1593467202}
 --- !u!4 &294445167
 Transform:
   m_ObjectHideFlags: 0
@@ -6296,6 +6300,8 @@ MonoBehaviour:
   lastObjectY: 0
   scoreText: {fileID: 1516013011}
   scoreText2: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!114 &1593467205
 MonoBehaviour:
   m_ObjectHideFlags: 0
