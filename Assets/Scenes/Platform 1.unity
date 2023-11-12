@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 91720106}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -347,6 +347,8 @@ MonoBehaviour:
   comboTimer: 3
   comboTime: 1
   comboTimerText: {fileID: 2027648926}
+  horizontalInputAxis: Horizontal
+  jumpInputButton: Jump
   dust: {fileID: 1615568650}
   jumpParticle: {fileID: 1244044254}
   timerEnd: {fileID: 856119650906565446}
@@ -541,6 +543,7 @@ MonoBehaviour:
   lastRoomEndY: 0
   lastObjectY: 0
   scoreText: {fileID: 929877790}
+  scoreText2: {fileID: 0}
 --- !u!81 &91720106
 AudioListener:
   m_ObjectHideFlags: 0

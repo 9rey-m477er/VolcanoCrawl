@@ -20,7 +20,7 @@ public class RisingLava : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player1"|| collision.gameObject.tag == "Player2")
         {
             Debug.Log("Dead");
             Die();

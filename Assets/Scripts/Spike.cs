@@ -14,7 +14,7 @@ public class Spike : MonoBehaviour
     private void Start()
     {
         // Find and store a reference to the player's Rigidbody2D component.
-        playerRigidbody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        playerRigidbody = GameObject.FindGameObjectWithTag("Player1").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
