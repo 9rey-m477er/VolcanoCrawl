@@ -562,7 +562,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91720095}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b42e9fc69b335c49bb3dbd504c664ac, type: 3}
   m_Name: 
@@ -599,6 +599,7 @@ MonoBehaviour:
   lastRoomEndY: 0
   lastObjectY: 0
   scoreText: {fileID: 929877790}
+  scoreText2: {fileID: 0}
 --- !u!81 &91720106
 AudioListener:
   m_ObjectHideFlags: 0
@@ -778,6 +779,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 565444140053789759, guid: 52be721810d0f7c4c8c9324549909404, type: 3}
   m_PrefabInstance: {fileID: 579382495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &294445165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294445167}
+  - component: {fileID: 294445166}
+  m_Layer: 0
+  m_Name: Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &294445166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294445165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b42e9fc69b335c49bb3dbd504c664ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easyRooms:
+  - {fileID: 6559610187960252138, guid: fd49372c2ff9c3a468bc958df862ee1d, type: 3}
+  - {fileID: 169906725351199423, guid: e6bf2280ad72064409777793f1cb05a6, type: 3}
+  - {fileID: 8977948501561954778, guid: 56b7ea52c027b8f46b801e89aae48ad2, type: 3}
+  - {fileID: 5381437009032480056, guid: a7ee08671c161fe418cc26f804ecfed8, type: 3}
+  - {fileID: 5461445901370724670, guid: c543e8edc9e9e9e44b306cb0ff757241, type: 3}
+  - {fileID: 5965624972758652483, guid: b6f5f5b51bf9552468b5db6add430f6e, type: 3}
+  mediumRooms:
+  - {fileID: 8994210638219433359, guid: 168a80f28b14ac04fae8fde81c0845ad, type: 3}
+  - {fileID: 9038521998449237022, guid: 8f884c7b62ebede41b59017d7ee2ca7a, type: 3}
+  - {fileID: 306523252291923901, guid: 865653d3e953ff242b656b8ee80f5ff4, type: 3}
+  - {fileID: 3038262863311372445, guid: d154a736a93c9604793b28603caa8502, type: 3}
+  - {fileID: 8413817478621484014, guid: fedb535b4d42d014fa1fdce6263106ca, type: 3}
+  hardRooms:
+  - {fileID: 4102752848554718285, guid: bc6c49669d2fc38499e69cd1f8b639b6, type: 3}
+  - {fileID: 775269925610408865, guid: f35afde0b34b3ec468aff54ee99419c7, type: 3}
+  - {fileID: 7131529872242563591, guid: cbedde0a66943d841822881bbc4c83c9, type: 3}
+  - {fileID: 6048744716010423782, guid: 63672d81b1bed9447982f5e8f2c76626, type: 3}
+  - {fileID: 2316530745719727706, guid: 7538ae0a950bac74a98a2dc804af81da, type: 3}
+  currentRooms: []
+  availableObjects: []
+  objects: []
+  TerrainHeight: 0
+  objectsMinDistance: 5
+  objectsMaxDistance: 10
+  objectsMinX: -1.4
+  objectsMaxX: 1.4
+  objectsMinRotation: -45
+  objectsMaxRotation: 45
+  lastRoomEndY: 0
+  lastObjectY: 0
+  scoreText: {fileID: 929877790}
+  scoreText2: {fileID: 1516013011}
+--- !u!4 &294445167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294445165}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.918488, y: 65.307785, z: 7.5785723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419752649
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,7 +6258,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593467202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b42e9fc69b335c49bb3dbd504c664ac, type: 3}
   m_Name: 
@@ -6217,6 +6295,7 @@ MonoBehaviour:
   lastRoomEndY: 0
   lastObjectY: 0
   scoreText: {fileID: 1516013011}
+  scoreText2: {fileID: 0}
 --- !u!114 &1593467205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9248,3 +9327,4 @@ SceneRoots:
   - {fileID: 1424086892}
   - {fileID: 2063991314}
   - {fileID: 155034517}
+  - {fileID: 294445167}
