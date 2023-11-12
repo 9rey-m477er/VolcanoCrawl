@@ -61,7 +61,7 @@ public class Generation : MonoBehaviour
     void AddRoom(float farthestRoomEndY)
     {
         GameObject room;
-        higherscore = int.Parse(higherText.text.Substring(6));
+        playerScore = int.Parse(scoreText.text.Substring(6));
 
         Debug.Log(playerScore);
         if(playerScore < 250)
@@ -195,18 +195,22 @@ public class Generation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scene.name.Equals("Two Player Mode"))
-        {
+       
             if (playerScore > playerScore2)
             {
                 higherscore = playerScore;
                 higherText = scoreText;
             }
+            else if(playerScore == playerScore2)
+        {
+            higherscore = playerScore;
+            higherText = scoreText;
+        }
             else
             {
                 higherscore = playerScore2;
                 higherText = scoreText2;
             }
-        }
+        
     }
 }
