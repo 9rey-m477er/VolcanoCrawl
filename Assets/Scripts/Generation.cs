@@ -61,15 +61,32 @@ public class Generation : MonoBehaviour
     void AddRoom(float farthestRoomEndY)
     {
         GameObject room;
-        playerScore = int.Parse(scoreText.text.Substring(6));
+        if (playerScore > playerScore2)
+        {
+            higherscore = playerScore;
+            higherText = scoreText;
+            higherscore = int.Parse(scoreText.text.Substring(6));
+        }
+        else if (playerScore == playerScore2)
+        {
+            higherscore = playerScore;
+            higherText = scoreText;
+        }
+        else
+        {
+            higherscore = playerScore2;
+            higherText = scoreText2;
+            higherscore = int.Parse(scoreText2.text.Substring(6));
+        }
+        
 
-        Debug.Log(playerScore);
-        if(playerScore < 250)
+        Debug.Log(higherscore);
+        if(higherscore < 250)
         {
             int randomRoomIndex = Random.Range(0, easyRooms.Length);
             room = Instantiate(easyRooms[randomRoomIndex]);
         }
-        else if(playerScore >= 250 && playerScore < 500) 
+        else if(higherscore >= 250 && higherscore < 500) 
         {
             if(Random.Range(0,2) == 0)
             {
@@ -82,12 +99,12 @@ public class Generation : MonoBehaviour
                 room = Instantiate(mediumRooms[randomRoomIndex]);
             }
         }
-        else if(playerScore >= 500 && playerScore < 750)
+        else if(higherscore >= 500 && higherscore < 750)
         {
             int randomRoomIndex = Random.Range(0, mediumRooms.Length);
             room = Instantiate(mediumRooms[randomRoomIndex]);
         }
-        else if(playerScore >= 750 && playerScore < 1000)
+        else if(higherscore >= 750 && higherscore < 1000)
         {
             if (Random.Range(0, 2) == 0)
             {
@@ -196,21 +213,7 @@ public class Generation : MonoBehaviour
     void Update()
     {
        
-            if (playerScore > playerScore2)
-            {
-                higherscore = playerScore;
-                higherText = scoreText;
-            }
-            else if(playerScore == playerScore2)
-        {
-            higherscore = playerScore;
-            higherText = scoreText;
-        }
-            else
-            {
-                higherscore = playerScore2;
-                higherText = scoreText2;
-            }
+            
         
     }
 }
