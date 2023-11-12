@@ -101,7 +101,13 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferCounter -= Time.deltaTime;
         }
 
-        // ... (rest of the existing code)
+        if (comboTime >= comboTimer)
+        {
+            timerEnd.Play();
+            comboTime = 0f;
+            jumpMultiplier = 1;
+        }
+
 
         UpdateAnimationState();
         UpdateParticleColor(dust);
