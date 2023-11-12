@@ -543,7 +543,7 @@ MonoBehaviour:
   lastRoomEndY: 0
   lastObjectY: 0
   scoreText: {fileID: 929877790}
-  scoreText2: {fileID: 0}
+  scoreText2: {fileID: 929877790}
 --- !u!81 &91720106
 AudioListener:
   m_ObjectHideFlags: 0
