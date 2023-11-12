@@ -169,6 +169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 3389404439885026918, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9157736054548558875, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -233,7 +237,7 @@ GameObject:
   - component: {fileID: 91720104}
   - component: {fileID: 91720105}
   - component: {fileID: 91720106}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -255,7 +259,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -994,7 +998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6240,7 +6244,7 @@ GameObject:
   - component: {fileID: 1593467205}
   - component: {fileID: 1593467204}
   - component: {fileID: 1593467203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player 2
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -6490,7 +6494,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -8630,6 +8634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Particle
       objectReference: {fileID: 0}
+    - target: {fileID: 3384119202496546133, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8945847867254535104, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
       propertyPath: lengthInSec
       value: 0.75
@@ -8913,6 +8921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosion
       objectReference: {fileID: 0}
+    - target: {fileID: 3389404439885026918, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9157736054548558875, guid: 70ffc4104207ff64eaa447d8e2d687f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9130,6 +9142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jump Particle
       objectReference: {fileID: 0}
+    - target: {fileID: 3384119202496546133, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8945847867254535104, guid: 60ce595ece75e7847bdc790bb92360fa, type: 3}
       propertyPath: lengthInSec
       value: 0.75
@@ -9271,7 +9287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2114063332354376366, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8245400847492958014, guid: 0f7e7db194bcf9a4ba5db1f3b219e492, type: 3}
       propertyPath: m_LocalPosition.x
