@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+using System.Text.RegularExpressions;
+using Random = UnityEngine.Random;
 
 public class Generation : MonoBehaviour
 {
@@ -26,11 +30,17 @@ public class Generation : MonoBehaviour
     public float lastObjectY;
 
     public Text scoreText;
+    public Text scoreText2;
+    private Text higherText;
     float playerScore = 0;
- 
+    float playerScore2 = 0;
+    float higherscore = 0;
+    private Scene scene;
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+        
         float width = 2.0f * Camera.main.orthographicSize * Camera.main.aspect;
         screenHeightInPoints = width;
         StartCoroutine(GeneratorCheck());
@@ -51,7 +61,7 @@ public class Generation : MonoBehaviour
     void AddRoom(float farthestRoomEndY)
     {
         GameObject room;
-        playerScore = int.Parse(scoreText.text.Substring(6));
+        higherscore = int.Parse(higherText.text.Substring(6));
 
         Debug.Log(playerScore);
         if(playerScore < 250)
@@ -102,7 +112,7 @@ public class Generation : MonoBehaviour
         currentRooms.Add(room);
         
     }
-
+    
     void GenerateObjectsIfRequired()
     {
         float playerY = transform.position.y;
@@ -185,6 +195,18 @@ public class Generation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (scene.name.Equals("Two Player Mode"))
+        {
+            if (playerScore > playerScore2)
+            {
+                higherscore = playerScore;
+                higherText = scoreText;
+            }
+            else
+            {
+                higherscore = playerScore2;
+                higherText = scoreText2;
+            }
+        }
     }
 }
