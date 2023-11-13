@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunSound: {fileID: 8300000, guid: af500bfcd4fee494e9f1b26cef4bd85c, type: 3}
+  originalPlayer1Mat: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  flashMaterial: {fileID: 2100000, guid: 6077931a1669ed14aa56f87100c97609, type: 2}
 --- !u!61 &3960197571079379853
 BoxCollider2D:
   m_ObjectHideFlags: 0

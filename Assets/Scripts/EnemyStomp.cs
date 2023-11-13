@@ -8,6 +8,8 @@ public class EnemyStomp : MonoBehaviour
     private GameObject floatingPoints;
     AudioSource source;
     public AudioClip rockCrush;
+    [SerializeField]
+    private GameObject deathParticle;
 
     public void Start()
     {
@@ -19,16 +21,24 @@ public class EnemyStomp : MonoBehaviour
         if (colGO.tag == "EnemyHead")
         {
             source.PlayOneShot(rockCrush, 1f);
-            ShowPoints(collision.gameObject, "+10");
+            ShowPoints(colGO, "+10");
+            DeathFX(colGO);
             colGO.transform.parent.gameObject.SetActive(false);
         }
     }
-    void ShowPoints(GameObject crystalObj, string pointText)
+    void ShowPoints(GameObject enemyObj, string pointText)
     {
         if (floatingPoints)
         {
-            GameObject ftPrefab = Instantiate(floatingPoints, crystalObj.transform.position, Quaternion.identity);
+            GameObject ftPrefab = Instantiate(floatingPoints, enemyObj.transform.position, Quaternion.identity);
             ftPrefab.GetComponentInChildren<TextMesh>().text = pointText;
+        }
+    }
+    void DeathFX(GameObject enemyObj)
+    {
+        if (deathParticle)
+        {
+            GameObject deathPart = Instantiate(deathParticle, enemyObj.transform.position, Quaternion.identity);
         }
     }
 

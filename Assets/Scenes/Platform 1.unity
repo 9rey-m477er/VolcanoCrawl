@@ -1362,6 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatingPoints: {fileID: 4372924295663382294, guid: 8d01eb54e97eac74f8da89e75e9f62e8, type: 3}
   rockCrush: {fileID: 8300000, guid: ff288c16bbc2d5c4e8c3d68a51364f7d, type: 3}
+  deathParticle: {fileID: 3714265421390761357, guid: 98e381e9eb759f747af74652765306bb, type: 3}
 --- !u!61 &1083158499
 BoxCollider2D:
   m_ObjectHideFlags: 0

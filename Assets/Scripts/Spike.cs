@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,11 +14,20 @@ public class Spike : MonoBehaviour
     public AudioClip stunSound;
 
     private Rigidbody2D playerRigidbody; // Reference to the player's Rigidbody2D component.
+    private GameObject player1;
+    private SpriteRenderer player1SpriteRenderer;
+
+    [SerializeField] private Material originalPlayer1Mat;
+    [SerializeField] private Material flashMaterial;
+
+    private Coroutine currentCoroutine;
 
     private void Start()
     {
         // Find and store a reference to the player's Rigidbody2D component.
         playerRigidbody = GameObject.FindGameObjectWithTag("Player1").GetComponent<Rigidbody2D>();
+        player1 = GameObject.FindGameObjectWithTag("Player1");
+        player1SpriteRenderer = player1.GetComponent<SpriteRenderer>();
         source = playerRigidbody.GetComponent<AudioSource>();
     }
 
@@ -26,7 +36,10 @@ public class Spike : MonoBehaviour
     {
         if (isStunned)
         {
-            source.PlayOneShot(stunSound, .7f);
+            if(source.isPlaying != true)
+            {
+                source.PlayOneShot(stunSound, .7f);
+            }
             stunTimer += Time.deltaTime;
             DisableHorizontalMovement();
             if (stunTimer >= stunDuration)
@@ -42,10 +55,11 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !isStunned)
+        if (collision.gameObject.tag.Equals("Player1") && !isStunned)
         {
             Debug.Log("Stunned");
             StunPlayer();
+            Flash();
         }
     }
 
@@ -72,5 +86,24 @@ public class Spike : MonoBehaviour
             // Restore the player's ability to move horizontally.
 
         }
+    }
+    public void Flash()
+    {
+        if (currentCoroutine != null)
+        {
+            StopCoroutine(currentCoroutine);
+        }
+        
+        currentCoroutine = StartCoroutine(StunFlash());
+    }
+    private IEnumerator StunFlash()
+    {
+        player1SpriteRenderer.material = flashMaterial;
+
+        yield return new WaitForSeconds(stunDuration);
+
+        player1SpriteRenderer.material = originalPlayer1Mat;
+
+        StopCoroutine(StunFlash());
     }
 }

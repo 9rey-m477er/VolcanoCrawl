@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             timerEnd.Play();
             comboTime = 0f;
             jumpMultiplier = 1;
-            audioSource.PlayOneShot(jumpComboPoof, 1f);
+            audioSource.PlayOneShot(jumpComboPoof, 2f);
         }
 
 

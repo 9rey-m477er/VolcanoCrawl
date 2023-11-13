@@ -339,9 +339,14 @@ MonoBehaviour:
   comboTimer: 3
   comboTime: 1
   comboTimerText: {fileID: 0}
+  horizontalInputAxis: Horizontal
+  jumpInputButton: Jump
   dust: {fileID: 0}
+  jumpParticle: {fileID: 0}
+  timerEnd: {fileID: 0}
   playerRun: {fileID: 0}
   playerJump: {fileID: 0}
+  jumpComboPoof: {fileID: 0}
 --- !u!95 &91720101
 Animator:
   serializedVersion: 5
@@ -377,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 1739527609}
   coinCollectSound: {fileID: 0}
+  floatingPoints: {fileID: 0}
 --- !u!4 &279076496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 565444140053789759, guid: dee32c5edcc9c7e47a02c9484cb3d09b, type: 3}
@@ -494,6 +500,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 565444140053789759, guid: dee32c5edcc9c7e47a02c9484cb3d09b, type: 3}
   m_PrefabInstance: {fileID: 1231906532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &506916695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.953092
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.51671475
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288930804698568051, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909683077870784765, guid: 982da3858d7f94647914b3847704a39b, type: 3}
+      propertyPath: m_Name
+      value: Rockie_Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 982da3858d7f94647914b3847704a39b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,8 +1007,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.006000042, y: -0.15695, z: 0}
-    m_Extent: {x: 1.2306, y: 1.23915, z: 0}
+    m_Center: {x: -0.0040500164, y: -0.15534997, z: 0}
+    m_Extent: {x: 1.22505, y: 1.24385, z: 0}
   m_PointLightInnerAngle: 182.3816
   m_PointLightOuterAngle: 211.51161
   m_PointLightInnerRadius: 2.5
@@ -4700,3 +4763,4 @@ SceneRoots:
   - {fileID: 2063991314}
   - {fileID: 5965893442251238443}
   - {fileID: 2640302405701894078}
+  - {fileID: 506916695}
