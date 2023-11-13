@@ -6,11 +6,19 @@ public class EnemyStomp : MonoBehaviour
 {
     [SerializeField]
     private GameObject floatingPoints;
+    AudioSource source;
+    public AudioClip rockCrush;
+
+    public void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject colGO = collision.gameObject;
         if (colGO.tag == "EnemyHead")
         {
+            source.PlayOneShot(rockCrush, 1f);
             ShowPoints(collision.gameObject, "+10");
             colGO.transform.parent.gameObject.SetActive(false);
         }

@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip playerRun;
     public AudioClip playerJump;
+    public AudioClip jumpComboPoof;
 
     private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
@@ -106,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
             timerEnd.Play();
             comboTime = 0f;
             jumpMultiplier = 1;
+            audioSource.PlayOneShot(jumpComboPoof, 1f);
         }
 
 

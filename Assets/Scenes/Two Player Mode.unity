@@ -414,6 +414,7 @@ MonoBehaviour:
   timerEnd: {fileID: 856119650906565446}
   playerRun: {fileID: 8300000, guid: 536e86f7e2a4f9a4e95ba280e45c6aa4, type: 3}
   playerJump: {fileID: 8300000, guid: 81607ee30e9a2be4e88eb0f66bc4562f, type: 3}
+  jumpComboPoof: {fileID: 8300000, guid: 5c023c44f77fbfd438079b4b5a362221, type: 3}
 --- !u!95 &91720101
 Animator:
   serializedVersion: 5
@@ -6479,6 +6480,7 @@ MonoBehaviour:
   timerEnd: {fileID: 93014448}
   playerRun: {fileID: 8300000, guid: 536e86f7e2a4f9a4e95ba280e45c6aa4, type: 3}
   playerJump: {fileID: 8300000, guid: 81607ee30e9a2be4e88eb0f66bc4562f, type: 3}
+  jumpComboPoof: {fileID: 8300000, guid: 5c023c44f77fbfd438079b4b5a362221, type: 3}
 --- !u!61 &1593467210
 BoxCollider2D:
   m_ObjectHideFlags: 0
