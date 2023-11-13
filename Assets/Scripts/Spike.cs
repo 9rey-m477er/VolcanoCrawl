@@ -9,12 +9,16 @@ public class Spike : MonoBehaviour
     private float stunDuration = 1.0f;
     private float stunTimer = 0.0f;
 
+    AudioSource source;
+    public AudioClip stunSound;
+
     private Rigidbody2D playerRigidbody; // Reference to the player's Rigidbody2D component.
 
     private void Start()
     {
         // Find and store a reference to the player's Rigidbody2D component.
         playerRigidbody = GameObject.FindGameObjectWithTag("Player1").GetComponent<Rigidbody2D>();
+        source = playerRigidbody.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +26,7 @@ public class Spike : MonoBehaviour
     {
         if (isStunned)
         {
+            source.PlayOneShot(stunSound, .7f);
             stunTimer += Time.deltaTime;
             DisableHorizontalMovement();
             if (stunTimer >= stunDuration)
