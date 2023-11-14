@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Spike : MonoBehaviour
 {
     private bool isStunned = false;
-    private float stunDuration = 1.0f;
+    private float stunDuration = 0.5f;
     private float stunTimer = 0.0f;
 
     AudioSource source;
