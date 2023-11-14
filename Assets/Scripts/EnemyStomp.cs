@@ -10,10 +10,13 @@ public class EnemyStomp : MonoBehaviour
     public AudioClip rockCrush;
     [SerializeField]
     private GameObject deathParticle;
+    Scoreboard scoreboard;
+
 
     public void Start()
     {
         source = GetComponent<AudioSource>();
+        scoreboard = GetComponent<Scoreboard>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,6 +27,7 @@ public class EnemyStomp : MonoBehaviour
             ShowPoints(colGO, "+10");
             DeathFX(colGO);
             colGO.transform.parent.gameObject.SetActive(false);
+            scoreboard.AddToScore(10);
         }
     }
     void ShowPoints(GameObject enemyObj, string pointText)
