@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     TMP_InputField input; 
     int[] scoreboard = new int[5];
     string[] names = new string[5];
-    
+    public TMP_Text currentScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +28,8 @@ public class Score : MonoBehaviour
     private void Awake()
     {
         LoadScores();
+        int newScore = PlayerPrefs.GetInt("HighScore");
+        currentScore.text = "Current Score: " + newScore;
     }
     void DisplayScores()
     {
