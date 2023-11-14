@@ -69,7 +69,7 @@ public class Generation : MonoBehaviour
         {
             higherscore = playerScore;
             higherText = scoreText;
-            higherscore = int.Parse(scoreText.text.Substring(6));
+            higherscore = int.Parse(scoreText.text.Substring(7));
         }
         else if (playerScore == playerScore2)
         {
@@ -80,7 +80,7 @@ public class Generation : MonoBehaviour
         {
             higherscore = playerScore2;
             higherText = scoreText2;
-            higherscore = int.Parse(scoreText2.text.Substring(6));
+            higherscore = int.Parse(scoreText2.text.Substring(7));
         }
         
 
