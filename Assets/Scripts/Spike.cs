@@ -55,7 +55,7 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player1") && !isStunned)
+        if (collision.gameObject.tag.Equals("Player1")||collision.gameObject.tag.Equals("Player2") && !isStunned)
         {
             Debug.Log("Stunned");
             StunPlayer();
