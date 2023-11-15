@@ -58,13 +58,13 @@ public class Spike : MonoBehaviour
         {
             Debug.Log("Player 1 Stunned");
             StunPlayer();
-            Flash();
+            Flash(collision.gameObject.GetComponent<SpriteRenderer>());
         }
         else if (collision.CompareTag("Player2") && !isStunned)
         {
             Debug.Log("Player 2 Stunned");
             StunPlayer();
-            Flash();
+            Flash(collision.gameObject.GetComponent<SpriteRenderer>());
         }
     }
     void StunPlayer()
@@ -91,23 +91,23 @@ public class Spike : MonoBehaviour
 
         }
     }
-    public void Flash()
+    public void Flash(SpriteRenderer spriteToChange)
     {
         if (currentCoroutine != null)
         {
             StopCoroutine(currentCoroutine);
         }
         
-        currentCoroutine = StartCoroutine(StunFlash());
+        currentCoroutine = StartCoroutine(StunFlash(spriteToChange));
     }
-    private IEnumerator StunFlash()
+    private IEnumerator StunFlash(SpriteRenderer sR)
     {
-        player1SpriteRenderer.material = flashMaterial;
+        sR.material = flashMaterial;
 
         yield return new WaitForSeconds(stunDuration);
 
-        player1SpriteRenderer.material = originalPlayer1Mat;
+        sR.material = originalPlayer1Mat;
 
-        StopCoroutine(StunFlash());
+        StopCoroutine(currentCoroutine);
     }
 }
