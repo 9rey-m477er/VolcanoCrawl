@@ -20,7 +20,7 @@ public class EnemyStomp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject colGO = collision.gameObject;
-        if (colGO.tag == "EnemyHead")
+        if (colGO.tag.Equals("EnemyHead"))
         {
             source.PlayOneShot(rockCrush, 1f);
             ShowPoints(colGO, "+10");
