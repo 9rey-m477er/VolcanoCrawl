@@ -247,10 +247,13 @@ public class Generation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerScore = int.Parse(scoreText.text.Substring(7));
-        playerScore2 = int.Parse(scoreText2.text.Substring(7));
-
-
-
+        if(scoreText.text.Length - 1 >= 6)
+        {
+            playerScore = int.Parse(scoreText.text.Substring(7));
+        }
+        if (scoreText2.text.Length - 1 >= 6)
+        {
+            playerScore2 = int.Parse(scoreText2.text.Substring(7));
+        }     
     }
 }
