@@ -838,7 +838,7 @@ MonoBehaviour:
   currentRooms: []
   availableObjects: []
   objects: []
-  TerrainHeight: 0
+  TerrainHeight: 16
   objectsMinDistance: 5
   objectsMaxDistance: 10
   objectsMinX: -1.4
