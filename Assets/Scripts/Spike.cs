@@ -52,17 +52,21 @@ public class Spike : MonoBehaviour
             }
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player1")||collision.gameObject.tag.Equals("Player2") && !isStunned)
+        if (collision.CompareTag("Player1") && !isStunned)
         {
-            Debug.Log("Stunned");
+            Debug.Log("Player 1 Stunned");
+            StunPlayer();
+            Flash();
+        }
+        else if (collision.CompareTag("Player2") && !isStunned)
+        {
+            Debug.Log("Player 2 Stunned");
             StunPlayer();
             Flash();
         }
     }
-
     void StunPlayer()
     {
         isStunned = true;
