@@ -22,6 +22,7 @@ public class RisingLava : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player1"|| collision.gameObject.tag == "Player2")
         {
+            PlayerPrefs.SetString("winner", collision.gameObject.tag);
             Debug.Log("Dead");
             Die();
         }
@@ -43,8 +44,16 @@ public class RisingLava : MonoBehaviour
 
     void Die()
     {
+        if(SceneManager.GetActiveScene().name.Equals("Two Player Mode"))
+        {
 
-        SceneManager.LoadScene("LeaderBoard");
+            SceneManager.LoadScene("Victory Screen");
+        }
+        else
+        {
+            SceneManager.LoadScene("LeaderBoard");
+        }
+        
     }
 
     IEnumerator IncreaseRiseSpeed()

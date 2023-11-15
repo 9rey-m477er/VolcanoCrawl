@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Two Player Mode.unity
     guid: eef51198a0c3fc0418785aa2268f3d8c
+  - enabled: 1
+    path: Assets/Scenes/Victory Screen.unity
+    guid: 3e324eaef57ef434b96cafe7ebcf543a
   m_configObjects: {}
