@@ -17,4 +17,8 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("Title Screen");
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
