@@ -21,4 +21,8 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
