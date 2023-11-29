@@ -318,7 +318,6 @@ GameObject:
   - component: {fileID: 724908671}
   - component: {fileID: 724908670}
   - component: {fileID: 724908669}
-  - component: {fileID: 724908668}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -346,48 +345,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -39.2}
   m_SizeDelta: {x: 164.7, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724908668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724908666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f2d9cc23642b844aa86b5c03e013f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnHover:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 593714761}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnHoverExit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 593714761}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &724908669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,7 +1697,6 @@ GameObject:
   - component: {fileID: 1964718343}
   - component: {fileID: 1964718342}
   - component: {fileID: 1964718341}
-  - component: {fileID: 1964718340}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -1768,48 +1724,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0, y: -90.4}
   m_SizeDelta: {x: 164.7, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1964718340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964718338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f2d9cc23642b844aa86b5c03e013f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnHover:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 593714761}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnHoverExit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 593714761}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1964718341
 MonoBehaviour:
   m_ObjectHideFlags: 0

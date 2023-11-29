@@ -531,6 +531,7 @@ MonoBehaviour:
   - {fileID: 7131529872242563591, guid: cbedde0a66943d841822881bbc4c83c9, type: 3}
   - {fileID: 6048744716010423782, guid: 63672d81b1bed9447982f5e8f2c76626, type: 3}
   - {fileID: 2316530745719727706, guid: 7538ae0a950bac74a98a2dc804af81da, type: 3}
+  - {fileID: 2316530745719727706, guid: 9d4a1ccb988563d498305b5b88447ca0, type: 3}
   currentRooms: []
   availableObjects: []
   objects: []

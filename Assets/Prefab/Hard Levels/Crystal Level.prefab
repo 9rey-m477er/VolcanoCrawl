@@ -6499,18 +6499,18 @@ PrefabInstance:
     - target: {fileID: 3846197777456662062, guid: 828209523e293ad44975b3438e707aef, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a8cabc4e264ad074c90addf84484a096, type: 3}
+      objectReference: {fileID: 21300000, guid: 04d729fa845396f49ad24c2d341fe316, type: 3}
     - target: {fileID: 3846197777456662062, guid: 828209523e293ad44975b3438e707aef, type: 3}
       propertyPath: m_Color.b
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846197777456662062, guid: 828209523e293ad44975b3438e707aef, type: 3}
       propertyPath: m_Color.g
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846197777456662062, guid: 828209523e293ad44975b3438e707aef, type: 3}
       propertyPath: m_Color.r
-      value: 0.6509434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846197777456662062, guid: 828209523e293ad44975b3438e707aef, type: 3}
       propertyPath: m_Materials.Array.data[0]
