@@ -10,6 +10,7 @@ public class ItemCollector : MonoBehaviour
 
     public AudioClip coinCollectSound;
     AudioSource audioSource;
+    private AudioClip clip, currentClip;
 
     [SerializeField] private GameObject floatingPoints;
     private void Start()
@@ -26,7 +27,8 @@ public class ItemCollector : MonoBehaviour
             ps.Play();
             collision.gameObject.GetComponent<Renderer>().enabled = false;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled= false;
-            audioSource.PlayOneShot(coinCollectSound, 1f);
+            audioSource.Stop();
+            audioSource.PlayOneShot(coinCollectSound, .7f);
             coins++;
             coinText.text = "Crystals: " + coins;
 

@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 1739527609}
-  coinCollectSound: {fileID: 8300000, guid: 09f40714b45fd7249aca32f07e20fe13, type: 3}
+  coinCollectSound: {fileID: 8300000, guid: aa27c05cf0518e143af346c596c036e5, type: 3}
   floatingPoints: {fileID: 4372924295663382294, guid: 8d01eb54e97eac74f8da89e75e9f62e8, type: 3}
 --- !u!82 &91720103
 AudioSource:
