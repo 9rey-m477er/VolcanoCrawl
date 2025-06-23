@@ -187,11 +187,14 @@ MonoBehaviour:
   comboTimer: 3
   comboTime: 1
   comboTimerText: {fileID: 0}
+  horizontalInputAxis: Horizontal
+  jumpInputButton: Jump
   dust: {fileID: 9015810753823202242}
   jumpParticle: {fileID: 0}
   timerEnd: {fileID: 0}
   playerRun: {fileID: 8300000, guid: 536e86f7e2a4f9a4e95ba280e45c6aa4, type: 3}
   playerJump: {fileID: 8300000, guid: 81607ee30e9a2be4e88eb0f66bc4562f, type: 3}
+  jumpComboPoof: {fileID: 0}
 --- !u!95 &4893174546306808869
 Animator:
   serializedVersion: 5
@@ -226,7 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
-  coinCollectSound: {fileID: 8300000, guid: 09f40714b45fd7249aca32f07e20fe13, type: 3}
+  coinCollectSound: {fileID: 8300000, guid: aa27c05cf0518e143af346c596c036e5, type: 3}
+  floatingPoints: {fileID: 0}
 --- !u!82 &152681753474728908
 AudioSource:
   m_ObjectHideFlags: 0
@@ -348,13 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b42e9fc69b335c49bb3dbd504c664ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableRooms:
-  - {fileID: 6559610187960252138, guid: fd49372c2ff9c3a468bc958df862ee1d, type: 3}
-  - {fileID: 169906725351199423, guid: e6bf2280ad72064409777793f1cb05a6, type: 3}
-  - {fileID: 8977948501561954778, guid: 56b7ea52c027b8f46b801e89aae48ad2, type: 3}
-  - {fileID: 5381437009032480056, guid: a7ee08671c161fe418cc26f804ecfed8, type: 3}
-  - {fileID: 5461445901370724670, guid: c543e8edc9e9e9e44b306cb0ff757241, type: 3}
-  - {fileID: 5965624972758652483, guid: b6f5f5b51bf9552468b5db6add430f6e, type: 3}
+  easyRooms: []
+  mediumRooms: []
+  hardRooms: []
   currentRooms: []
   availableObjects: []
   objects: []
@@ -367,6 +367,10 @@ MonoBehaviour:
   objectsMaxRotation: 45
   lastRoomEndY: 0
   lastObjectY: 0
+  scoreText: {fileID: 0}
+  scoreText2: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!81 &5003484675800872178
 AudioListener:
   m_ObjectHideFlags: 0
