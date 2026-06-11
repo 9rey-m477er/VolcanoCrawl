@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateParticleColor(dust);
         UpdateParticleColor(jumpParticle);
 
-        comboTimerText.text = "Jump Multiplier: " + jumpMultiplier + "x";
+        comboTimerText.text = jumpMultiplier + "x";
     }
 
     private void UpdateAnimationState()
